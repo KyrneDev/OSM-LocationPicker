@@ -1,30 +1,23 @@
 {
-  "author": {
-    "name": "Charlie K",
-    "email": "charlie.k@redevs.org",
-    "url": "https://redevs.org"
-  },
-  "bugs": {
-    "url": "https://github.com/CDK2020/OSM-LocationPicker/issues"
-  },
-  "bundleDependencies": false,
-  "deprecated": false,
-  "description": "Location Picker for Open Street Maps",
-  "keywords": [
-    "location",
-	"picker",
-	"OSM",
-	"Open Street Maps"
-  ],
-  "license": "MIT",
-  "main": "dist/location-picker.min.js",
-  "name": "OSM-LocationPicker",
-  "peerDependencies": {
-    "jquery": ">=1.0.0"
+  "name": "osm-locationpicker",
+  "version": "0.1.0",
+  "description": "Open Street Maps location picker with Google Maps API search.",
+  "main": "Open Street Maps location picker with Google Maps API search",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/CDK2020/OSM-LocationPicker.git"
+    "url": "https://github.com/CDK2020/OSM-LocationPicker.git"
   },
-  "version": "0.1.0"
+  "keywords": [
+    "Location",
+    "Picker"
+  ],
+  "author": "Charlie K",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CDK2020/OSM-LocationPicker/issues"
+  },
+  "homepage": "https://github.com/CDK2020/OSM-LocationPicker#readme"
 }
