@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Autocomplete Address Form</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      	#map { height: 400px; width:100%;}
+      	.map-container { margin-top: 10px;}
+      textarea {width:100%}
+				
+    </style>
+    
+    <!-- required js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    
+    <!-- location picker plugin -->
+    <script src="../dist/location-picker.min.js"></script>
+    
+    <!-- sample init -->
+    <script>
+		$(function(){
+				var locationPicker = $('.location-picker').locationPicker({
+					locationChanged : function(data){
+						$('#output').text(JSON.stringify(data));
+					},
+					init :{ current_location: true}
+				});
+		});
+		</script>
+  </head>
+
+  <body>
+  	<div class="container">
+			<h2>Location Picker demo</h2>
+			<form role="form">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+								<label for="usr">Select Location:</label>
+								<div class="location-picker">
+									<input type="text" id="txtAddress" class="form-control" placeholder="Enter address here" data-type='address' />
+									<input type="hidden" id="txtLocation" data-type='location-store' />
+
+									<div class='map-container'>
+										<div id="map" data-type='map'></div>
+									</div>
+								</div>
+
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+								<label for="usr">Output log:</label>
+								<textarea id="output" class="form-control" disabled rows="20"></textarea>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+  </body>
+</html>
+
