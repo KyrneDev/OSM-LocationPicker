@@ -94,14 +94,13 @@ var locationPicker = $('.location-picker').locationPicker({
 				init:{ 
 					current_location: true, // True by default, initializes location picker with current location 
 					address : 'Put init adddress here',
-					location : {latitude, longitude} // put initial location here
-					}
-			}
-			// callback method
-			locationChanged : function(data){
+					location : {lat: <latitude>, lng: <longitude>} // put initial location here
+					},
+				// callback method
+				locationChanged : function(data){
 
-				$('#output').text(JSON.stringify(data));
-			}
+					$('#output').text(JSON.stringify(data));
+				}
 			
 		});
 </script>
